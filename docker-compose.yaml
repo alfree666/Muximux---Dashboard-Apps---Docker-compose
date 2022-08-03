@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+
+  muximux:
+    image: lscr.io/linuxserver/muximux:latest
+    container_name: muximux
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=EuropeMadrid
+    volumes:
+      - ./muximux/data/:/config
+    ports:
+      - 8200:80
+    restart: unless-stopped
+
+    
