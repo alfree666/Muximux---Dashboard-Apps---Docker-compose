@@ -8,11 +8,11 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=EuropeMadrid
+      - TZ=Europe/Madrid
     volumes:
       - ./muximux/data/:/config
     ports:
-      - 8200:80
+      - "8200:80"
     restart: unless-stopped
 
     
